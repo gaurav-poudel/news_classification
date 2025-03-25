@@ -1,0 +1,44 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Article Classifier</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 20px; 
+        }
+        h1 { color: #333; }
+        textarea { 
+            width: 100%; 
+            height: 200px; 
+            margin: 15px 0; 
+            padding: 10px; 
+            border: 1px solid #ddd; 
+            border-radius: 5px; 
+        }
+        button { 
+            background-color: #4CAF50; 
+            color: white; 
+            padding: 10px 15px; 
+            border: none; 
+            border-radius: 5px; 
+            cursor: pointer; 
+        }
+        button:hover { background-color: #45a049; }
+    </style>
+</head>
+<body>
+    <h1>News Article Classifier</h1>
+    <p>Paste a news article below to classify it into one of the categories: Business, Entertainment, Politics, Sport, or Tech.</p>
+    
+    <form action="/classify" method="post">
+        <textarea name="article_text" placeholder="Paste your news article here..." required></textarea>
+        <button type="submit">Classify Article</button>
+    </form>
+</body>
+</html>
